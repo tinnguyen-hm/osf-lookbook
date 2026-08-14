@@ -6,23 +6,10 @@
 <title>OSF × Hike Medical — Flyer Review</title>
 <link rel="stylesheet" href="css/style.css">
 <style>
-  .fl-page { max-width: 540px; margin: 0 auto; background:#fff; }
-  .fl-hero { background: var(--osf-green); color:#fff; padding: 34px 28px 44px; position:relative; overflow:hidden; }
-  .fl-hero h1 { font-size: 26px; font-weight:800; margin:0; line-height:1.2; max-width: 70%; }
-  .fl-hero .rule { width:36px; height:3px; background:#cfe6a8; margin-top:12px; }
-  .fl-runner { position:absolute; right: 10px; bottom: -10px; width:150px; height:150px; opacity:.35; background: radial-gradient(circle at 60% 30%, #fff 0 20px, transparent 21px), linear-gradient(160deg,#fff 0 2px, transparent 2px); border-radius: 50% 50% 40% 40%; }
-  .fl-body { padding: 22px 28px 6px; }
-  .fl-body p { font-size: 13.5px; line-height:1.6; color:#333; }
-  .fl-check { list-style:none; padding:0; margin: 14px 0 22px; }
-  .fl-check li { font-size: 14px; font-weight:600; padding: 6px 0 6px 26px; position:relative; }
-  .fl-check li:before { content:"✓"; position:absolute; left:0; color:var(--osf-green); font-weight:800; }
-  .fl-cta { display:flex; align-items:center; gap:14px; background: var(--osf-green); color:#fff; border-radius: 14px; padding: 16px 18px; margin: 0 28px 28px; }
-  .fl-qr { width:56px; height:56px; background:#fff; border-radius:6px; padding:4px; flex-shrink:0; }
-  .fl-qr .grid { width:100%; height:100%; background: repeating-linear-gradient(45deg,#000 0 3px,#fff 3px 6px), repeating-linear-gradient(-45deg,#000 0 3px,#fff 3px 6px); background-blend-mode:multiply; }
-  .fl-cta b { font-size: 14.5px; }
-  .fl-footer { background: var(--osf-green); padding: 20px 28px; display:flex; align-items:center; justify-content:center; gap:14px; }
-  .fl-footer img, .fl-footer .mark { height:22px; }
-  .fl-footer span { color:#fff; font-weight:700; font-size:13px; opacity:.9; }
+  .doc-download { text-align:center; margin-bottom: 16px; }
+  .doc-download a { display:inline-block; font-size:13px; font-weight:700; color:#fff; background:var(--osf-green); padding:8px 18px; border-radius:8px; text-decoration:none; }
+  .doc-viewer-wrap { display:flex; justify-content:center; padding: 0 0 8px; }
+  .doc-viewer-wrap embed { width:100%; max-width:900px; height:85vh; border:none; box-shadow:0 10px 40px rgba(16,24,40,0.15); background:#fff; border-radius:4px; }
 </style>
 </head>
 <body>
@@ -35,31 +22,9 @@
 </div>
 
 <div class="subpage-content">
-  <div class="frame">
-    <div class="frame-chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url-bar">Flyer.pdf — 8.5in × 11in</span></div>
-    <div class="fl-page">
-      <div class="fl-hero">
-        <h1>Get Back to What You Love Doing</h1>
-        <div class="rule"></div>
-        <div class="fl-runner"></div>
-      </div>
-      <div class="fl-body">
-        <p>Foot pain rarely stops you all at once. It just talks you out of things, one at a time. You skip the walk after dinner. You cut the workout short, or don't bother starting it. None of it feels like a big deal in the moment, but it adds up to a smaller life than the one you'd choose.</p>
-        <p>Custom insoles are shaped to your exact foot, helping you offload the pressure of standing and walking, so the strain doesn't spread to your shins, hips, and back. Using your Hike Medical Custom Insoles helps get you back to the things you care about.</p>
-        <ul class="fl-check">
-          <li>Quick 5-minute foot scan</li>
-          <li>No doctor's visit required</li>
-          <li>Personalized support designed just for you</li>
-          <li>100% covered for every OSF Mission Partner</li>
-          <li>Amazing fit guarantee, or we rebuild them for free</li>
-        </ul>
-      </div>
-      <div class="fl-cta">
-        <div class="fl-qr"><div class="grid"></div></div>
-        <b>Get Started &rarr; go.hikemedical.com/osf-getback</b>
-      </div>
-      <div class="fl-footer"><span>OSF HealthCare</span><span>Administered by hike</span></div>
-    </div>
+  <div class="doc-download"><a href="OSF%20FALL%20FLYER.pdf" download>Download PDF</a></div>
+  <div class="doc-viewer-wrap">
+    <embed src="OSF%20FALL%20FLYER.pdf" type="application/pdf">
   </div>
 
   <div id="comments-root" data-page="flyer"></div>
