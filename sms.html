@@ -6,15 +6,16 @@
 <title>OSF × Hike Medical — SMS Series Review</title>
 <link rel="stylesheet" href="css/style.css">
 <style>
-  .sms-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+  .sms-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 24px; align-items:start; }
   .sms-label { text-align:center; font-size:12px; color:var(--text-gray); margin-bottom:10px; }
-  .phone { border: 10px solid #111; border-radius: 34px; background:#fff; min-height: 420px; overflow:hidden; }
-  .phone .notch { height:22px; background:#111; border-radius: 0 0 14px 14px; width:120px; margin:0 auto; }
-  .phone .head { text-align:center; padding: 10px 0 12px; border-bottom: 2px solid var(--osf-green); }
+  .phone { width: 260px; aspect-ratio: 9 / 19.5; margin: 0 auto; border: 10px solid #111; border-radius: 36px; background:#fff; overflow:hidden; display:flex; flex-direction:column; box-shadow: 0 4px 16px rgba(16,24,40,0.12); }
+  .phone .notch { flex-shrink:0; height:22px; background:#111; border-radius: 0 0 14px 14px; width:120px; margin:0 auto; }
+  .phone .head { flex-shrink:0; text-align:center; padding: 10px 0 12px; border-bottom: 2px solid var(--osf-green); }
   .phone .head b { font-size:13.5px; display:block; }
   .phone .head span { font-size:11px; color:var(--text-gray); }
-  .phone .bubble { background:#e9edf2; border-radius: 14px; margin: 16px 14px; padding: 12px 14px; font-size: 12.5px; line-height: 1.5; }
-  @media (max-width:800px){ .sms-grid{grid-template-columns:1fr; max-width:320px; margin:0 auto;} }
+  .phone .screen { flex:1; background:#f4f6f8; padding-top: 4px; }
+  .phone .bubble { background:#e9edf2; border-radius: 14px; margin: 12px 14px; padding: 12px 14px; font-size: 12.5px; line-height: 1.5; }
+  @media (max-width:800px){ .sms-grid{grid-template-columns:1fr; max-width:280px; margin:0 auto;} }
 </style>
 </head>
 <body>
@@ -34,7 +35,7 @@
       <div class="phone">
         <div class="notch"></div>
         <div class="head"><b>Hike Medical</b><span>+1 (309) 306-3696</span></div>
-        <div class="bubble">BENEFIT ALERT: Sore knees and a tight back? It might start at your feet. Your OSF benefits include custom Hike insoles: go.hikemedical.com/osf-learn Subject to terms and conditions.</div>
+        <div class="screen"><div class="bubble">BENEFIT ALERT: Sore knees and a tight back? It might start at your feet. Your OSF benefits include custom Hike insoles: go.hikemedical.com/osf-learn Subject to terms and conditions.</div></div>
       </div>
     </div>
 
@@ -43,7 +44,7 @@
       <div class="phone">
         <div class="notch"></div>
         <div class="head"><b>Hike Medical</b><span>+1 (309) 306-3696</span></div>
-        <div class="bubble">REMINDER: Foot pain talking you out of walks or workouts? Your OSF benefits include custom Hike insoles: go.hikemedical.com/osf-learn Subject to terms and conditions.</div>
+        <div class="screen"><div class="bubble">REMINDER: Foot pain talking you out of walks or workouts? Your OSF benefits include custom Hike insoles: go.hikemedical.com/osf-learn Subject to terms and conditions.</div></div>
       </div>
     </div>
 
@@ -52,7 +53,7 @@
       <div class="phone">
         <div class="notch"></div>
         <div class="head"><b>Hike Medical</b><span>+1 (309) 306-3696</span></div>
-        <div class="bubble">LAST CALL: That heel pain isn't random, it's inflammation from unsupported steps. Redeem your custom Hike insoles: go.hikemedical.com/osf-learn Subject to terms and conditions.</div>
+        <div class="screen"><div class="bubble">LAST CALL: That heel pain isn't random, it's inflammation from unsupported steps. Redeem your custom Hike insoles: go.hikemedical.com/osf-learn Subject to terms and conditions.</div></div>
       </div>
     </div>
 
