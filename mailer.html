@@ -6,45 +6,10 @@
 <title>OSF × Hike Medical — Mailer Review</title>
 <link rel="stylesheet" href="css/style.css">
 <style>
-  .ml-page { max-width: 700px; margin: 0 auto 32px; background:#fff; padding: 30px 34px; }
-  .ml-brand { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 20px; }
-  .ml-brand .logo { font-weight:800; color: var(--osf-green); font-size:15px; }
-  .ml-brand h3 { font-size: 15px; color: var(--osf-green); margin:0 0 8px; max-width:260px; }
-  .ml-steps { display:flex; gap:16px; }
-  .ml-steps div b { font-size:11.5px; color: var(--osf-green); display:block; }
-  .ml-steps div span { font-size:10.5px; color:var(--text-gray); }
-  .ml-addr { font-size:13px; margin: 16px 0; color:#333; }
-  .ml-table-row { display:grid; grid-template-columns: 2fr 1.3fr; gap: 14px; margin-top: 10px; }
-  table.ml-info { width:100%; border-collapse:collapse; font-size:12.5px; }
-  table.ml-info td { padding:6px 8px; border:1px solid var(--border); }
-  table.ml-info td:first-child { font-weight:700; width:90px; background:#f8f9fb; }
-  .ml-status { color: var(--osf-green); font-weight:700; }
-  .ml-get { border:1px solid var(--border); border-radius:10px; padding:14px; display:flex; gap:10px; align-items:center; }
-  .ml-qr { width:52px; height:52px; flex-shrink:0; }
-  .ml-qr .grid { width:100%; height:100%; background: repeating-linear-gradient(45deg,#000 0 3px,#fff 3px 6px), repeating-linear-gradient(-45deg,#000 0 3px,#fff 3px 6px); background-blend-mode:multiply; }
-  .ml-get b { font-size:13.5px; display:block; }
-  .ml-get span { font-size:11.5px; color:var(--text-gray); }
-  .ml-partner { background:#f2f7ea; border-radius:10px; padding:16px; margin-top:22px; font-size:13px; }
-  .ml-partner b { color: var(--osf-green); }
-  .ml-why { display:grid; grid-template-columns: 1.4fr 1fr; gap: 20px; margin-top:16px; }
-  .ml-why h4 { font-size:12.5px; color:var(--osf-green); margin:0 0 8px; }
-  .ml-why li { font-size:12.5px; line-height:1.5; margin-bottom:8px; }
-  .ml-quote { background:#f6f8fb; border-radius:10px; padding:12px; font-size:11.5px; font-style:italic; }
-  .ml-signoff { margin-top: 18px; font-size: 13px; }
-
-  .ml-faq-header { background: var(--osf-green); color:#fff; padding: 20px 24px; }
-  .ml-faq-header h2 { margin:0 0 2px; font-size:19px; }
-  .ml-faq-header span { font-size:11.5px; opacity:.85; }
-  .ml-faq-grid { display:grid; grid-template-columns:1fr 1fr; gap: 20px; padding: 22px 0; }
-  .ml-faq-item { border-left: 3px solid var(--osf-green); padding-left: 12px; margin-bottom: 16px; }
-  .ml-faq-item b { font-size:13px; display:block; margin-bottom:4px; }
-  .ml-faq-item p, .ml-faq-item div.step { font-size:12px; color:#333; line-height:1.5; margin: 4px 0; }
-  .ml-faq-item .step b { color:var(--text-dark); font-size:12px; }
-  .ml-support-box { border:1px solid var(--border); border-radius:10px; padding:16px; margin-top: 4px; }
-  .ml-support-box h4 { font-size:12px; text-transform:uppercase; color:var(--osf-green); margin:0 0 10px; }
-  .ml-support-grid { display:grid; grid-template-columns: repeat(4,1fr); gap:10px; font-size:12px; }
-  .ml-support-grid b { display:block; font-size:11px; color:var(--text-gray); text-transform:uppercase; }
-  @media (max-width:700px){ .ml-table-row,.ml-why,.ml-faq-grid,.ml-support-grid{grid-template-columns:1fr;} }
+  .doc-download { text-align:center; margin-bottom: 16px; }
+  .doc-download a { display:inline-block; font-size:13px; font-weight:700; color:#fff; background:var(--osf-green); padding:8px 18px; border-radius:8px; text-decoration:none; }
+  .doc-viewer-wrap { display:flex; justify-content:center; padding: 0 0 8px; }
+  .doc-viewer-wrap embed { width:100%; max-width:900px; height:85vh; border:none; box-shadow:0 10px 40px rgba(16,24,40,0.15); background:#fff; border-radius:4px; }
 </style>
 </head>
 <body>
@@ -57,114 +22,9 @@
 </div>
 
 <div class="subpage-content">
-
-  <div class="frame" style="margin-bottom:24px;">
-    <div class="frame-chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url-bar">Mailer.pdf — page 1 of 2</span></div>
-    <div class="ml-page">
-      <div class="ml-brand">
-        <div class="logo">OSF &times; hike</div>
-        <div style="text-align:right;">
-          <h3>Hike makes it simple to get medical-grade custom insoles</h3>
-          <div class="ml-steps">
-            <div><b>1. Scan</b><span>Takes about 5 min with your phone</span></div>
-            <div><b>2. Build</b><span>3D-printed to spec, to the highest quality standards</span></div>
-            <div><b>3. Deliver</b><span>Arrives at home in about 2 weeks</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="ml-addr">[First] [Last]<br>[Address 1] [Address 2]<br>[City], [ST] [ZIP]</div>
-
-      <div class="ml-table-row">
-        <table class="ml-info">
-          <tr><td>Name</td><td>[Member Name]</td></tr>
-          <tr><td>Group</td><td>OSF Healthcare</td></tr>
-          <tr><td>Benefit</td><td>Custom Insoles</td></tr>
-          <tr><td>Date</td><td>[Mail Date]</td></tr>
-          <tr><td>Status</td><td class="ml-status">Eligible to redeem &lt;for $15&gt;</td></tr>
-        </table>
-        <div class="ml-get">
-          <div class="ml-qr"><div class="grid"></div></div>
-          <div><b>Get yours today.</b><span>Scan this QR code or visit: go.hikemedical.com/osf-edu</span></div>
-        </div>
-      </div>
-
-      <div class="ml-partner">Through <b>OSF's</b> partnership with <b>Hike Medical</b>, you have exclusive access to clinical-grade custom insoles, backed by the Hike Fit Guarantee.</div>
-
-      <div class="ml-why">
-        <div>
-          <h4>Why Hike?</h4>
-          <ul style="padding-left:16px;margin:0;">
-            <li>When your feet aren't supported, your knees absorb extra stress, your hips compensate, and your lower back tightens to pick up the slack, so the rest of your body doesn't have to.</li>
-            <li>Store-bought insoles are one-size-fits-all. They wear down quickly and stop doing their job. A Hike insole is built from a precise scan with medical-grade materials, made to last.</li>
-            <li>Getting custom insoles through a specialist means multiple appointments, months of waiting, and costs that can reach $800+. Hike delivers the same clinical-grade result in two weeks, exclusively accessible through OSF.</li>
-          </ul>
-        </div>
-        <div class="ml-quote">&ldquo;For years I have been dealing with knee pain. The day I went to work with my custom insoles I felt like a new man! Walking doesn't hurt. I felt like I could actually run! And my knee pain disappeared!&rdquo;<br>— Hike Member</div>
-      </div>
-
-      <div class="ml-signoff">We hope to serve you next!<br><b>Hike Medical</b></div>
-    </div>
-  </div>
-
-  <div class="frame">
-    <div class="frame-chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url-bar">Mailer.pdf — page 2 of 2</span></div>
-    <div class="ml-page" style="padding:0;">
-      <div class="ml-faq-header">
-        <h2>Frequently Asked Questions</h2>
-        <span>Your Hike Medical custom insole benefit &middot; OSF Employee Benefit</span>
-      </div>
-      <div class="ml-faq-grid" style="padding: 22px 34px;">
-        <div>
-          <div class="ml-faq-item">
-            <b>How It Works</b>
-            <div class="step"><b>1. You're Covered:</b> OSF benefits provide one free pair of custom insoles to every Mission Partner.</div>
-            <div class="step"><b>2. Simple Process:</b> Complete a quick five-minute phone scan and receive your covered 2026 Hike Insoles, custom designed for your unique foot shape, in two weeks. Amazing fit or Hike will rebuild for free.</div>
-            <div class="step"><b>3. Ongoing Support:</b> After the first year, OSF benefits allow Mission Partners to purchase one replacement pair annually for just $15.</div>
-            <div class="step"><b>4. Want Additional Pairs Before 2027?</b> That's easy from the member dashboard and exclusively priced for OSF Mission Partners.</div>
-          </div>
-          <div class="ml-faq-item">
-            <b>What if my insoles don't fit?</b>
-            <p>That's where the Hike Fit Guarantee comes in. If it's not right, we'll figure out what's wrong and make you a new pair, on us.</p>
-          </div>
-          <div class="ml-faq-item">
-            <b>Do I need a doctor's visit or prescription?</b>
-            <p>No. You order entirely from home with no appointments, referrals, or paperwork. All you need is your smartphone and about 5 minutes.</p>
-          </div>
-          <div class="ml-faq-item">
-            <b>Is my information private during the scan?</b>
-            <p>Yes. The scan captures only the shape of your feet. No location data is recorded.</p>
-          </div>
-        </div>
-        <div>
-          <div class="ml-faq-item">
-            <b>How do I place my order?</b>
-            <p>Scan the QR code on the front of this letter. Create your account, scan your feet in-app, and submit your order.</p>
-          </div>
-          <div class="ml-faq-item">
-            <b>How long does delivery take?</b>
-            <p>Your custom insoles are typically delivered to the provided address within approximately 2 weeks of placing your order.</p>
-          </div>
-          <div class="ml-faq-item">
-            <b>How do I scan my feet?</b>
-            <p>Using your smartphone, Hike technology captures the shape of your feet as you glide the phone in an arc around your foot. Scan the QR code to watch the how-to video.</p>
-            <div class="ml-qr" style="margin-top:8px;"><div class="grid"></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div style="padding: 0 34px 28px;">
-        <div class="ml-support-box">
-          <h4>Member Support &mdash; Reach Us Your Way</h4>
-          <div class="ml-support-grid">
-            <div><b>Text</b>1-309-306-3696</div>
-            <div><b>Email</b>support@hikemedical.com</div>
-            <div><b>Chat</b>In the Hike portal</div>
-            <div><b>Call</b>1-309-306-3696</div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="doc-download"><a href="OSF%20FALL%20EDU%20LETTER.pdf" download>Download PDF</a></div>
+  <div class="doc-viewer-wrap">
+    <embed src="OSF%20FALL%20EDU%20LETTER.pdf" type="application/pdf">
   </div>
 
   <div id="comments-root" data-page="mailer"></div>
