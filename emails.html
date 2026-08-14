@@ -17,7 +17,8 @@
   .lb-overlay.open.zoomed { display:block; padding:40px; box-sizing:border-box; }
   .lb-overlay img { display:block; }
   .lb-overlay img.fit { max-width:92vw; max-height:92vh; width:auto; height:auto; cursor: zoom-in; margin:auto; }
-  .lb-overlay img.full { max-width:none; max-height:none; width:auto; height:auto; cursor: zoom-out; margin:0; }
+  .lb-overlay img.full { max-width:none; max-height:none; width:auto; height:auto; cursor: grab; margin:0; -webkit-user-drag:none; user-select:none; }
+  .lb-overlay img.full.dragging { cursor: grabbing; }
   .lb-close { position:fixed; top:18px; right:22px; z-index:1001; width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.12); color:#fff; border:none; font-size:20px; cursor:pointer; display:flex; align-items:center; justify-content:center; }
   .lb-close:hover { background:rgba(255,255,255,0.22); }
   .lb-hint { position:fixed; bottom:18px; left:50%; transform:translateX(-50%); z-index:1001; color:#fff; font-size:12px; opacity:.75; }
@@ -45,7 +46,7 @@
 <div class="lb-overlay" id="lbOverlay">
   <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
   <img id="lbImg" class="fit" src="OSF%20FALL%20EMAILS.png" alt="OSF Email Series — zoomed">
-  <div class="lb-hint">Click image to zoom in/out &middot; Esc or click outside to close</div>
+  <div class="lb-hint">Click to zoom in/out &middot; drag to look around &middot; Esc or click outside to close</div>
 </div>
 
 <script src="js/comments-config.js"></script>
@@ -68,13 +69,19 @@
     overlay.classList.remove('zoomed');
   }
 
+  var isDown = false;
+  var didDrag = false;
+  var startX = 0, startY = 0, startScrollLeft = 0, startScrollTop = 0;
+
   thumb.addEventListener('click', openLightbox);
   closeBtn.addEventListener('click', closeLightbox);
   overlay.addEventListener('click', function (e) {
     if (e.target === overlay) closeLightbox();
   });
+
   lbImg.addEventListener('click', function () {
-    var zoomingIn = lbImg.className === 'fit';
+    if (didDrag) { didDrag = false; return; } // was a drag, not a tap — don't toggle zoom
+    var zoomingIn = lbImg.className.indexOf('full') === -1;
     lbImg.className = zoomingIn ? 'full' : 'fit';
     overlay.classList.toggle('zoomed', zoomingIn);
     if (zoomingIn) {
@@ -85,6 +92,34 @@
       });
     }
   });
+
+  lbImg.addEventListener('pointerdown', function (e) {
+    if (lbImg.className.indexOf('full') === -1) return; // only drag when zoomed in
+    isDown = true;
+    didDrag = false;
+    startX = e.clientX;
+    startY = e.clientY;
+    startScrollLeft = overlay.scrollLeft;
+    startScrollTop = overlay.scrollTop;
+    lbImg.classList.add('dragging');
+    lbImg.setPointerCapture(e.pointerId);
+    e.preventDefault();
+  });
+  lbImg.addEventListener('pointermove', function (e) {
+    if (!isDown) return;
+    var dx = e.clientX - startX;
+    var dy = e.clientY - startY;
+    if (Math.abs(dx) > 3 || Math.abs(dy) > 3) didDrag = true;
+    overlay.scrollLeft = startScrollLeft - dx;
+    overlay.scrollTop = startScrollTop - dy;
+  });
+  function endDrag() {
+    isDown = false;
+    lbImg.classList.remove('dragging');
+  }
+  lbImg.addEventListener('pointerup', endDrag);
+  lbImg.addEventListener('pointercancel', endDrag);
+
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && overlay.classList.contains('open')) closeLightbox();
   });
