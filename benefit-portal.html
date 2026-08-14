@@ -6,26 +6,34 @@
 <title>OSF × Hike Medical — Benefit Portal Review</title>
 <link rel="stylesheet" href="css/style.css">
 <style>
-  .bp-shell { display:grid; grid-template-columns: 220px 1fr; min-height: 480px; }
-  .bp-side { background:#0f1626; color:#cdd3e0; padding:22px 18px; }
-  .bp-side .brand { font-weight:800; color:#fff; font-size:15px; margin-bottom:24px; }
-  .bp-side .item { padding:9px 10px; border-radius:8px; font-size:13.5px; margin-bottom:4px; }
-  .bp-side .item.active { background: rgba(78,130,9,0.25); color:#fff; font-weight:700; }
-  .bp-main { padding: 28px 32px; }
-  .bp-tile { background:#f6f8fb; border:1px solid var(--border); border-radius:14px; padding:22px; display:flex; gap:18px; align-items:center; margin-bottom:26px; }
-  .bp-logo { width:56px; height:56px; border-radius:12px; background:#004be0; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:14px; flex-shrink:0; }
-  .bp-tile h2 { margin:0 0 4px; font-size:19px; }
-  .bp-tile p { margin:0; font-size:13.5px; color:var(--text-gray); }
-  .bp-section h3 { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--osf-green); margin:0 0 14px; }
-  .bp-steps { display:grid; grid-template-columns: repeat(3,1fr); gap:14px; margin-bottom:30px; }
-  .bp-step { background:#fff; border:1px solid var(--border); border-radius:10px; padding:14px; }
-  .bp-step .n { width:26px; height:26px; border-radius:50%; background:var(--osf-green); color:#fff; font-weight:800; font-size:12px; display:flex; align-items:center; justify-content:center; margin-bottom:8px; }
-  .bp-step b { font-size:13.5px; display:block; margin-bottom:4px; }
-  .bp-step p { font-size:12.5px; color:var(--text-gray); margin:0; line-height:1.5; }
-  .bp-redeem { background:#fff; border:1px solid var(--border); border-radius:10px; padding:18px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
-  .bp-redeem p { margin:0; font-size:13.5px; color:var(--text-gray); }
-  .bp-redeem a { background:var(--osf-green); color:#fff; font-weight:700; font-size:13.5px; padding:10px 18px; border-radius:8px; }
-  @media (max-width:700px){ .bp-shell{grid-template-columns:1fr;} .bp-side{display:none;} .bp-steps{grid-template-columns:1fr;} }
+  .bp-page { display:flex; background:#fff; font-size:13.5px; min-height:520px; }
+  .bp-side { width:190px; flex-shrink:0; background:#fafbfc; border-right:1px solid var(--border); padding:16px 0; }
+  .bp-side .brand { display:flex; align-items:center; gap:8px; font-weight:800; padding: 0 16px 16px; border-bottom:1px solid var(--border); margin-bottom:10px; }
+  .bp-side ul { list-style:none; margin:0; padding:0; }
+  .bp-side li { padding:9px 16px; font-size:13px; color:#333; display:flex; align-items:center; gap:8px; }
+  .bp-side li.active { color: var(--osf-green); font-weight:700; background:rgba(78,130,9,.08); border-right:3px solid var(--osf-green); }
+  .bp-side li.sub { padding-left:32px; font-size:12.5px; color: var(--text-gray); }
+  .bp-side li.sub.active { color: var(--osf-green); font-weight:700; }
+  .bp-main { flex:1; }
+  .bp-topbar { display:flex; align-items:center; gap:12px; padding:14px 24px; border-bottom:1px solid var(--border); }
+  .bp-search { flex:1; background: var(--bg); border-radius:8px; padding:8px 14px; font-size:12.5px; color: var(--text-gray); }
+  .bp-crumb { padding: 14px 24px 0; font-size:12px; color: var(--text-gray); }
+  .bp-crumb b { color: var(--text-dark); }
+  .bp-header { display:flex; align-items:center; justify-content:space-between; padding: 12px 24px 18px; border-bottom:1px solid var(--border); }
+  .bp-header .left { display:flex; align-items:center; gap:12px; }
+  .bp-icon { width:34px; height:34px; border-radius:8px; background:#1a3fc4; color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; }
+  .bp-header h2 { margin:0; font-size:18px; }
+  .bp-header .by { font-size:11.5px; color: var(--text-gray); }
+  .bp-tag { background:rgba(78,130,9,.12); color: var(--osf-green); font-weight:700; font-size:11.5px; padding:4px 12px; border-radius:20px; }
+  .bp-rows { padding: 4px 24px; }
+  .bp-row { display:flex; gap:20px; padding:14px 0; border-bottom:1px solid var(--border); }
+  .bp-row .k { width:170px; flex-shrink:0; font-size:11px; font-weight:800; letter-spacing:.04em; color: var(--text-gray); }
+  .bp-row .v { font-size:13.5px; }
+  .bp-row .v ol { margin:0; padding-left:18px; }
+  .bp-row .v a { color: var(--osf-green); font-weight:700; }
+  .bp-footer-user { margin-top:auto; padding:14px 16px; border-top:1px solid var(--border); display:flex; align-items:center; gap:8px; font-size:12px; }
+  .bp-footer-user .av { width:26px; height:26px; border-radius:50%; background:#d1d5db; }
+  .bp-disclaimer { padding: 16px 24px; font-size:10.5px; color: var(--text-gray); font-style:italic; border-top:1px solid var(--border); }
 </style>
 </head>
 <body>
@@ -34,47 +42,57 @@
 <div class="subpage-title">
   <span class="num">03</span>
   <h2>OSF Benefit Portal</h2>
-  <span class="desc">Member portal benefit tile and redemption flow</span>
+  <span class="desc">Member portal benefit tile and redemption flow for the custom insole offering</span>
 </div>
 
 <div class="subpage-content">
   <div class="frame">
-    <div class="frame-chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url-bar">portal.osfhealthcare.org/benefits</span></div>
-    <div class="bp-shell">
+    <div class="frame-chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url-bar">portal.osf.com/benefits/custom-insoles</span></div>
+    <div class="bp-page">
       <div class="bp-side">
-        <div class="brand">OSF Portal</div>
-        <div class="item">Dashboard</div>
-        <div class="item">My Benefits</div>
-        <div class="item active">Custom Insoles</div>
-        <div class="item">Wellness Programs</div>
-        <div class="item">Documents</div>
-        <div class="item">Support</div>
+        <div class="brand">OSF | hike</div>
+        <ul>
+          <li>📊 Dashboard</li>
+          <li>💳 Coverage & ID Cards</li>
+          <li>📄 Claims</li>
+          <li class="active">♥ Benefits</li>
+          <li class="sub">Medical</li>
+          <li class="sub">Dental & Vision</li>
+          <li class="sub active">Health & Wellness</li>
+          <li class="sub">Pharmacy</li>
+          <li>📁 Documents</li>
+          <li>✉ Messages</li>
+          <li>⚙ Settings</li>
+        </ul>
+        <div class="bp-footer-user"><span class="av"></span> [Member Name]<br>ID: ****4821</div>
       </div>
       <div class="bp-main">
-        <div class="bp-tile">
-          <div class="bp-logo">hike</div>
-          <div>
-            <h2>Custom Insoles from Hike Medical</h2>
-            <p>Medical-grade custom insoles built from a 5-minute phone scan — no clinic visit required.</p>
+        <div class="bp-topbar"><div class="bp-search">Search benefits, claims, documents...</div><span>🔔</span><span>ⓘ</span><span>EN</span></div>
+        <div class="bp-crumb">Benefits / Health & Wellness / <b>Custom Insoles</b></div>
+        <div class="bp-header">
+          <div class="left">
+            <div class="bp-icon">hike</div>
+            <div><h2>Custom Insole Benefit</h2><div class="by">Provided by Hike Medical</div></div>
           </div>
+          <div class="bp-tag">Eligible</div>
         </div>
-
-        <div class="bp-section">
-          <h3>How It Works</h3>
-          <div class="bp-steps">
-            <div class="bp-step"><div class="n">1</div><b>You're Covered</b><p>OSF benefits provide one free pair of custom insoles to every Mission Partner.</p></div>
-            <div class="bp-step"><div class="n">2</div><b>Simple Process</b><p>Complete a quick 5-minute phone scan and receive your custom Hike Insoles in about 2 weeks.</p></div>
-            <div class="bp-step"><div class="n">3</div><b>Ongoing Support</b><p>After the first year, purchase one replacement pair annually for just $15.</p></div>
+        <div class="bp-rows">
+          <div class="bp-row">
+            <div class="k">HOW IT WORKS</div>
+            <div class="v"><ol>
+              <li><b>You're Covered:</b> OSF provides one free pair to every Mission Partner.</li>
+              <li><b>Simple Process:</b> complete a five-minute scan, receive your covered pair in 2 weeks.</li>
+              <li><b>Ongoing Support:</b> after year one, replacement pairs are $15 annually.</li>
+              <li><b>Want More?</b> Additional pairs available anytime from the member dashboard.</li>
+            </ol></div>
           </div>
+          <div class="bp-row"><div class="k">HOW TO REDEEM</div><div class="v">Start your scan at <a>hikemedical.com/osf</a> from your phone.</div></div>
+          <div class="bp-row"><div class="k">DELIVERY TIME</div><div class="v">Approximately 2 weeks from scan completion.</div></div>
+          <div class="bp-row"><div class="k">DOCUMENTATION REQUIRED</div><div class="v">None. Eligibility is verified automatically through your OSF benefits enrollment.</div></div>
+          <div class="bp-row"><div class="k">BENEFIT PERIOD</div><div class="v">Renews annually on your plan's benefit year start date.</div></div>
+          <div class="bp-row"><div class="k">CONTACT</div><div class="v">support@hikemedical.com · Text/Call 1-309-306-3696</div></div>
         </div>
-
-        <div class="bp-section">
-          <h3>How to Redeem</h3>
-          <div class="bp-redeem">
-            <p>Ready to get your custom insoles? Start your scan online in about 5 minutes.</p>
-            <a>hikemedical.com/osf</a>
-          </div>
-        </div>
+        <div class="bp-disclaimer">Eligibility to receive Hike Custom Insoles is subject to the agreement between your organization and Hike Medical, including your current employment and/or membership status. Questions? Contact your benefits administrator or support@hikemedical.com.</div>
       </div>
     </div>
   </div>
