@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OSF × Hike Medical — PowerPoint Review</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .pp-deck { display: flex; flex-direction: column; gap: 20px; }
+  .slide { aspect-ratio: 16/9; border-radius: 12px; overflow:hidden; position:relative; box-shadow: 0 1px 2px rgba(16,24,40,0.06), 0 8px 24px rgba(16,24,40,0.08); border:1px solid var(--border); }
+  .slide .tag { position:absolute; top:14px; left:14px; background:rgba(0,0,0,0.15); color:#fff; font-size:11px; font-weight:700; padding:3px 9px; border-radius:6px; }
+  .slide.hero { background: var(--osf-green); color:#fff; padding: 40px 48px; display:flex; flex-direction:column; justify-content:center; }
+  .slide.hero h1 { font-size: 30px; margin:0 0 14px; max-width: 60%; }
+  .slide.hero .cols { display:flex; gap:40px; margin-top: 20px; }
+  .slide.hero .cols div b { display:block; font-size:14px; margin-bottom:4px; }
+  .slide.hero .cols div span { font-size:12px; opacity:.85; }
+  .slide.table { background:#fff; padding: 32px 44px; }
+  .slide.table h2 { font-size:20px; margin:0 0 6px; color: var(--osf-green); }
+  .slide.table p { font-size:12.5px; color:var(--text-gray); margin:0 0 14px; }
+  .slide.table table { width:100%; border-collapse:collapse; font-size:11.5px; }
+  .slide.table th { text-align:left; border-bottom:2px solid var(--osf-green); padding:5px 8px; }
+  .slide.table td { padding:5px 8px; border-bottom:1px solid var(--border); }
+  .slide.stats { background:#fff; padding: 32px 44px; display:flex; flex-direction:column; justify-content:center; }
+  .slide.stats .row { display:flex; gap:30px; margin-top:10px; }
+  .slide.stats .row div { text-align:center; }
+  .slide.stats .row b { font-size:34px; color: var(--osf-green); display:block; }
+  .slide.stats .row span { font-size:11.5px; color:var(--text-gray); }
+  .slide.stats small { font-size: 9.5px; color: var(--text-gray); margin-top: 16px; display:block; max-width: 600px; }
+  .slide.cta { background:#fff; padding: 30px 44px; }
+  .slide.cta h2 { font-size: 19px; margin:0 0 16px; }
+  .slide.cta .steps { display:flex; gap: 20px; }
+  .slide.cta .steps div { flex:1; }
+  .slide.cta .steps .n { width:24px; height:24px; border-radius:50%; background:var(--osf-green); color:#fff; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center; margin-bottom:6px; }
+  .slide.cta .steps b { font-size:12.5px; display:block; }
+  .slide.cta .steps p { font-size:11px; color:var(--text-gray); margin: 2px 0 0; }
+  .slide.cta .qr-cta { margin-top:20px; background: var(--osf-green); color:#fff; display:inline-flex; align-items:center; gap:10px; padding:10px 16px; border-radius:10px; }
+  .slide.cta .qr-cta .box { width:32px; height:32px; background: repeating-linear-gradient(45deg,#fff 0 3px,transparent 3px 6px); border-radius:3px; }
+  @media (max-width: 640px) { .slide.hero .cols { flex-direction: column; gap: 10px; } .slide.cta .steps { flex-direction: column; } }
+</style>
+</head>
+<body>
+
+<div class="subpage-bar"><a href="index.html">← Back to Lookbook</a></div>
+<div class="subpage-title">
+  <span class="num">07</span>
+  <h2>OSF PowerPoint</h2>
+  <span class="desc">Overview deck for benefits presentations and enrollment meetings</span>
+</div>
+
+<div class="subpage-content">
+  <div class="pp-deck">
+
+    <div class="slide hero">
+      <span class="tag">Slide 1</span>
+      <h1>Your Custom Insole Benefit. Built for your feet.</h1>
+      <p style="max-width:60%;font-size:13.5px;">You're Covered: OSF benefits provide one free pair of custom insoles to every Mission Partner.</p>
+      <div class="cols">
+        <div><b>1. Scan</b><span>Takes about 5 minutes with your phone. Our AI creates a precise model of your feet.</span></div>
+        <div><b>2. Build</b><span>Insoles are 3D-printed to spec, to the highest quality standards.</span></div>
+        <div><b>3. Deliver</b><span>Arrives at home in about 2 weeks.</span></div>
+      </div>
+    </div>
+
+    <div class="slide table">
+      <span class="tag" style="background:rgba(0,0,0,0.06);color:#333;">Slide 2</span>
+      <h2>Store-bought insoles aren't built for your feet.</h2>
+      <p>Insoles off the shelf are designed for an average foot. They feel okay at first, but wear down quickly. Getting something better means a specialist, multiple appointments, and $800+ on average.</p>
+      <table>
+        <thead><tr><th>Hike</th><th>Over the Counter</th><th>Traditional Custom</th></tr></thead>
+        <tbody>
+          <tr><td>Custom built for you</td><td>✓</td><td>✗</td><td>✓</td></tr>
+          <tr><td>Speed</td><td>5 minute scan</td><td>A trip to the store</td><td>3-4 clinical visits</td></tr>
+          <tr><td>Time commitment</td><td>Delivered in 2 weeks</td><td>Trying on for weeks</td><td>9 weeks end to end</td></tr>
+          <tr><td>Affordable</td><td>$0 - $15</td><td>$20-$200</td><td>$800+ on average</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="slide stats">
+      <span class="tag" style="background:rgba(0,0,0,0.06);color:#333;">Slide 3</span>
+      <p style="font-size:13px;color:#333;max-width:600px;">Proven and trusted for over 100 years, custom insoles use biomechanics to align your body from the ground up. Hike modernizes the delivery of care, and its insoles are trusted by clinicians and used daily by thousands of members.</p>
+      <div class="row">
+        <div><b>66%</b><span>improvements in muscle &amp; joint symptoms</span></div>
+        <div><b>53%</b><span>less pain after using Hike insoles</span></div>
+        <div><b>54%</b><span>boost in energy level while at work</span></div>
+      </div>
+      <small>Averages based on survey results conducted with a population of Hike members during their first year of using Hike insoles. Timing of respondents' results range from their first ten weeks to their first six months.</small>
+    </div>
+
+    <div class="slide cta">
+      <span class="tag" style="background:rgba(0,0,0,0.06);color:#333;">Slide 4</span>
+      <h2>Custom insoles in four steps. No app download. No clinic visit. No paperwork.</h2>
+      <div class="steps">
+        <div><div class="n">1</div><b>You're Covered</b><p>One free pair to every OSF Mission Partner.</p></div>
+        <div><div class="n">2</div><b>Simple Process</b><p>Five-minute phone scan, delivered in two weeks.</p></div>
+        <div><div class="n">3</div><b>Ongoing Support</b><p>After the first year, purchase one replacement pair annually for just $15.</p></div>
+        <div><div class="n">4</div><b>Want More?</b><p>Easy from the member dashboard, exclusively priced for OSF Mission Partners.</p></div>
+      </div>
+      <div class="qr-cta"><div class="box"></div><b>Ready to get started? &rarr; hikemedical.com/osf</b></div>
+    </div>
+
+  </div>
+
+  <div id="comments-root" data-page="powerpoint"></div>
+</div>
+
+<script src="js/comments-config.js"></script>
+<script src="js/comments.js"></script>
+</body>
+</html>
